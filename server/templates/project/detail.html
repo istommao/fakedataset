@@ -1,0 +1,104 @@
+{% extends 'base.html' %}{% load static %}
+{% block topPanel %}
+<div class="fly-panel fly-column">
+    <div class="layui-container">
+    </div>
+</div>
+{% endblock topPanel %}
+
+
+{% block leftBlock %}
+<style>
+    .project-head {
+        max-width: 1020px;
+        margin: auto;
+        font-size: 16px;
+        color: #fff;
+        background: #2d8cf0;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 2px 3px #eee;
+        box-shadow: 0 2px 3px #eee;
+    }
+    .head-content {
+        padding: 20px;
+    }
+    .project-head .tag {
+        width: 69%;
+        font-size: 13px;
+        margin-top: 16px;
+        padding-right: 10px;
+
+        background: rgba(0,0,0,.3);
+        border-radius: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .project-head .tag span {
+        padding: 5px 10px;
+        background: rgba(0,0,0,.5);
+        display: inline-block;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin-right: 10px;
+        width: 100px;
+        text-align: center;
+    }
+    .project-head .right-content {
+        width: 21%;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        -webkit-box-shadow: 0 0 3px #000;
+        box-shadow: 0 0 3px #000;
+        text-align: center;
+        background: #252d47;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .right-content img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+    .right-content .author {
+        padding: 2px 10px;
+        font-size: 14px;
+        margin-top: 10px;
+        max-width: 200px;
+        background: rgba(0,0,0,.3);
+        border-radius: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+<div class="layui-col-md12">
+    <div class="project-head">
+        <div class="head-content">
+            <div class="em-spots" style=""></div>{{ project.name }}<p class="tag">
+                <span>Base URL</span>/mock/
+                </p><p class="tag"><span>Project ID</span>{{ project.uid }}</p>
+
+            <div class="right-content">
+                <img src="//img.souche.com/29482f8a082b5015ef71d763b046cd6d.jpg">
+                <p class="author">{{ project.creator }}</p>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock leftBlock %}

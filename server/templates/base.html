@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>easydocs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="python,blog">
+    <meta name="description" content="codingcat">
+    <link rel="stylesheet" href="{% static 'res/layui/css/layui.css' %}">
+    <link rel="stylesheet" href="{% static 'res/css/global.css' %}">
+    {% block extrastyle %}{% endblock extrastyle %}
+</head>
+
+<body>
+    <div class="fly-header" style="background:#49505F;">
+        <div class="layui-container">
+          <a class="fly-logo" href="/"> <img src="{% static 'res/images/logo2.png' %}" alt="layui"></a>
+            {% block topnav %}
+                {% include 'topnav.html' %}
+            {% endblock topnav %}
+            <ul class="layui-nav fly-nav-user">
+            </ul>
+        </div>
+    </div>
+
+    {% block topPanel %}{% endblock topPanel %}
+
+    <div class="layui-container">
+        <div class="layui-row layui-col-space15">
+            {% block mainer %}
+                {% block leftBlock %} {% endblock leftBlock %}
+            {% endblock mainer %}
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><a href="/">easydocs</a> 2018 &copy; <a href="#">easydocs</a></p>
+    </div>
+
+    <script src="{% static 'res/layui/layui.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script>
+    $(function(){
+        function footerPosition(){
+            $(".footer").removeClass("fixed-bottom");
+            var contentHeight = document.body.scrollHeight,//网页正文全文高度
+                winHeight = window.innerHeight;//可视窗口高度，不包括浏览器顶部工具栏
+            if(!(contentHeight > winHeight)){
+                //当网页正文高度小于可视窗口高度时，为footer添加类fixed-bottom
+                $(".footer").addClass("fixed-bottom");
+            }
+
+        }
+        footerPosition();
+        $(window).resize(footerPosition);
+    });
+    </script>
+    {% block extrascript %}{% endblock extrascript %}
+
+</body>
+
+</html>

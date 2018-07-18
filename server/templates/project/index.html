@@ -1,0 +1,35 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block topPanel %}
+<div class="fly-panel fly-column">
+    <div class="layui-container">
+    </div>
+</div>
+{% endblock topPanel %}
+
+{% block leftBlock %}
+    <div class="layui-col-md8">
+        {% for project in projects %}
+            <div class="cardCover">
+                <div class="cardBox">
+                    <div class="box">
+                        <a href="#"><div class="boxImg"><img src="{% static 'image/default.jpg' %}"></div></a>
+                        <a href="{{ project.uid }}/">
+                            <div class="boxContent">
+                                <p class="boxTitle" title="{{ project.name }}">{{ project.name }}</p>
+                                <p class="boxDesc" title="{{ project.intro|truncatechars:32 }}">{{ project.intro|truncatechars:32 }}</p>
+                                <div class="boxBottom">
+                                    <div class="bottom-box clearfix">
+                                        <div class="evaluation-box l">
+                                            <div class="author-info"><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock leftBlock %}

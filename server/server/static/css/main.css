@@ -1,0 +1,123 @@
+body, html {
+    color: #505050;
+    line-height: 1.75em;
+    background: #ebebeb;
+    position: relative;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei","Microsoft YaHei UI","Microsoft YaHei",sans-serif;
+}
+
+.post {
+    padding: 35px;
+    background: #fff;
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+}
+.post .post-head {
+    text-align: center;
+}
+.post .post-head .post-title a {
+    color: #303030;
+}
+
+.post .post-head .post-title {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.2em;
+}
+.post .post-head .post-meta {
+    color: #959595;
+    margin: 14px 0 0;
+}
+.post .post-head .post-meta span {
+    margin: 0 7px;
+    white-space: nowrap;
+}
+.post .featured-media {
+    margin-top: 30px;
+    overflow: hidden;
+}
+.post .featured-media img {
+    width: 100%;
+}
+.post .post-content {
+    margin: 30px 0;
+}
+
+.post-content {
+    font: 400 18px/1.62 Georgia,"Xin Gothic","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
+    color: #444443;
+}
+.post-content p {
+    margin-top: 0;
+    margin-bottom: 1.46em;
+}
+.post .post-footer {
+    margin-top: 30px;
+    border-top: 1px solid #ebebeb;
+    padding: 21px 0 0;
+}
+
+.sidebar .widget {
+    background: #fff;
+    padding: 21px 30px;
+}
+
+.widget {
+    margin-bottom: 35px;
+}
+
+.widget .title {
+    margin-top: 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 21px;
+    position: relative;
+}
+
+#top {
+    margin: 0 auto;
+}
+
+#top .activeLink a {
+    color: white;
+}
+
+#content {
+    margin: 30px 0 15px 0;
+}
+#content .post .thumbnail {
+    height: 300px;
+}
+
+.copyright {
+    background: #111;
+    font-size: 13px;
+    text-align: center;
+    color: #555555;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-top: 1px solid #303030;
+    height: 80px;
+}
+.fixed-bottom {position: fixed;bottom: 0;width:100%;}
+
+.widget .tag-cloud a {
+    border: 1px solid #ebebeb;
+    padding: 2px 7px;
+    color: #959595;
+    line-height: 1.5em;
+    display: inline-block;
+    margin: 0 7px 7px 0;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.detail-body code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}

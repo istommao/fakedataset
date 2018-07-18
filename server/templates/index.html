@@ -1,0 +1,51 @@
+{% extends 'base.html' %}{% load static %}
+
+{% block topPanel %}
+<div class="fly-panel fly-column">
+    <div class="layui-container">
+        <ul class="layui-clear">
+            <li class="layui-hide-xs layui-this"><a href="/">首页</a></li>
+            <li><a href="#">其他</a></li>
+        </ul>
+
+    </div>
+</div>
+{% endblock topPanel %}
+
+{% block leftBlock %}
+    <div class="layui-col-md8">
+
+      <div class="fly-panel" style="margin-bottom: 0;">
+
+        <ul class="article-list">
+          {% for article in articles %}
+          <li>
+            <a href="#" class="fly-avatar">
+              <img src="{% static 'res/images/codingcat.jpg' %}" alt="#">
+            </a>
+            <h2>
+              <a href="{% url 'info:article_detail' article.uid %}">{{ article.title }}</a>
+            </h2>
+            <div class="fly-list-info">
+              <a link>
+                <cite>codincat</cite>
+              </a>
+              <span><i class="iconfont icon-shijian"></i> {{ article.creation_time|date:'Y-m-d' }}</span>
+              <span class="fly-list-nums">
+                <i class="iconfont icon-liulanyanjing" title="star"></i> 0
+              </span>
+            </div>
+            <div class="short-intro" style="margin-top:15px;">
+              <a href="{% url 'info:article_detail' article.uid %}" target="_blank" >
+                <img src="{{ article.image.url }}" alt="">
+              </a>
+              <p class="fly-case-descv2">{{ article.intro }}</p>
+            </div>
+          </li>
+          {% endfor %}
+
+        </ul>
+
+      </div>
+    </div>
+{% endblock leftBlock %}
